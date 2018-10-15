@@ -1,0 +1,3 @@
+---
+- name: restart tomcat
+  command: systemctl stop tomcat

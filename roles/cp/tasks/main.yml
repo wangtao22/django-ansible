@@ -1,0 +1,14 @@
+---
+- name: ping test
+  ping:
+  tags: ping
+
+- name: cp file
+  copy: src=http.conf dest=/tmp
+  tags: cp
+- name: install git
+  yum: name=git
+- name: install tomcat
+  yum: name=tomcat
+  notify: restart tomcat
+  tags: install_tomcat
